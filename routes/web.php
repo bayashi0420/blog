@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 
 use Illuminate\Support\Facades\Route;
-use app\http\Controllers\PostController;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +30,6 @@ Route::middleware('auth')->group(function () {
 });
 route::get('/posts', [PostController::class, 'index']);
 require __DIR__ . '/auth.php';
+route::get('/posts/{post}', [PostController::class, 'show']);
+route::get('/posts/{post}/edit', [PostController::class, 'edit']);
+route::put('/posts/{post}', [PostController::class, 'update']);
