@@ -33,3 +33,4 @@ require __DIR__ . '/auth.php';
 route::get('/posts/{post}', [PostController::class, 'show']);
 route::get('/posts/{post}/edit', [PostController::class, 'edit']);
 route::put('/posts/{post}', [PostController::class, 'update']);
+route::delete('/posts/{post}', [PostController::class, 'delete']);
